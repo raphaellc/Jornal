@@ -2,10 +2,15 @@
 
 int main(int argc, char* argv[])
 {
-	Jogo jogo;
-	jogo.inicializar();
-	jogo.executar();
-	jogo.finalizar();
+	//Criar uma classe chamada Jornal
+	//Encapsular as característicar e ações do Jornal
+	//Características: título do jornal; data da edição, site, título da notícia, texto da notícia.
+	
+	Jogo jornal;
+	
+	jornal.inicializar();
+	jornal.executar();
+	jornal.finalizar();
 
 	return 0;
 }

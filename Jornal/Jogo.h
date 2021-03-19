@@ -1,16 +1,19 @@
 #pragma once
 #include "libUnicornio.h"
+#include "Jornal.h"
 
 class Jogo
 {
 public:
 	Jogo();
 	~Jogo();
-	Sprite sprite_tempJornal, player;
-	Texto texto_tituloJornal,texto_coluna;
 	void inicializar();
 	void finalizar();
-
 	void executar();
+protected:
+	void carregarRecursos();
+private:
+	Jornal * jornal;
+	Sprite player;
 };
 
