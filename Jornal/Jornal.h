@@ -11,6 +11,6 @@ public:
 private:
 	void inicializar();
 	Sprite sprite_tempJornal;
-	Texto texto_tituloJornal, texto_coluna;
+	Texto texto_tituloJornal, texto_coluna, texto_tituloNoticia;
 };
 
