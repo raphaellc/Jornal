@@ -35,12 +35,14 @@ void Jogo::finalizar()
 {
 	//	O resto da finalização vem aqui (provavelmente, em ordem inversa a inicialização)!
 	//	...
-
+	
 	uniFinalizar();
 }
 
 void Jogo::executar()
 {
+	Jornal* j1;
+	
 	while(!gTeclado.soltou[TECLA_ESC] && !gEventos.sair)
 	{
 		uniIniciarFrame();
@@ -54,6 +56,7 @@ void Jogo::executar()
 		player.desenhar(gJanela.getLargura() / 3, gJanela.getAltura() / 6);
 		uniTerminarFrame();
 	}
+	delete jornal;
 }
 
 void Jogo::carregarRecursos()

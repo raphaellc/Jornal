@@ -5,6 +5,11 @@ Jornal::Jornal()
 	inicializar();
 }
 
+Jornal::~Jornal()
+{
+	delete[]paginas;
+}
+
 void Jornal::adicionaTituloJornal(string tit_jornal)
 {
 	texto_tituloJornal.setString(tit_jornal);
@@ -26,10 +31,14 @@ void Jornal::desenhar()
 	texto_tituloJornal.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 6);
 	texto_coluna.desenhar(gJanela.getLargura() / 3.8, gJanela.getAltura() / 1.8);
 	texto_tituloNoticia.desenhar(gJanela.getLargura() / 3.3, gJanela.getAltura() / 2.5);
+	for (int i = 0; i < numero_paginas; i++)
+		paginas[i].desenhar();
+		
 }
 
 void Jornal::inicializar()
 {
+	numero_paginas = 10;
 	sprite_tempJornal.setSpriteSheet("templateJornal");
 	sprite_tempJornal.setEscala(0.5, 0.5);
 	
@@ -51,4 +60,11 @@ void Jornal::inicializar()
 	texto_coluna.setCor(0, 0, 0);
 	texto_coluna.setEspacamentoLinhas(1.5);
 
+	Noticia* ntc = new Noticia();
+	paginas = new Pagina[numero_paginas];
+	for (int i = 0; i < numero_paginas; i++)
+		paginas[i].inicializar();
+	
+	
+		
 }
