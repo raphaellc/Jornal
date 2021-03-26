@@ -26,6 +26,8 @@ void Jornal::adicionaTextoNoticia(string texto_noticia, int nro_pg, int nro_noti
 	paginas[0].obtemNoticias()[0].obtemColunas()[1].defineTextoColuna(texto_noticia);
 	paginas[0].obtemNoticias()[1].obtemColunas()[0].defineTextoColuna(texto_noticia);
 	paginas[0].obtemNoticias()[1].obtemColunas()[1].defineTextoColuna(texto_noticia);
+	paginas[1].obtemNoticias()[1].obtemColunas()[1].defineTextoColuna(texto_noticia);
+	paginas[1].obtemNoticias()[1].obtemColunas()[1].defineTextoColuna(texto_noticia);
 }
 
 void Jornal::desenhar()
