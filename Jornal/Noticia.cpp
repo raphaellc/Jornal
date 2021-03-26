@@ -16,11 +16,14 @@ void Noticia::inicializar()
 	
 }
 
-void Noticia::defineTextoNoticia(string texto)
+void Noticia::defineTituloNoticia(string texto)
 {
-	texto_not = texto;
+	titulo_noticia.setString(texto);
 }
 
-void Noticia::defineColuna(Coluna* col)
+
+Coluna* Noticia::obtemColunas()
 {
+	return colunas;
 }
+

@@ -11,6 +11,7 @@ public:
 	~Pagina();
 	void inicializar();
 	void desenhar();
+	Noticia* obtemNoticias();
 private:
 	int x, y;
 	Texto numero_pagina;

@@ -20,7 +20,7 @@ void Jogo::inicializar()
 	jornal = new Jornal();
 	jornal->adicionaTituloJornal("Movimento Diário");
 	jornal->adicionaTituloNoticia("Pandemia já faz XXXX vítimas");
-	jornal->adicionaTextoNoticia("Após descaso do Governo de Jair Bolsonaro, Brasil bate novos récordes de mortes e sistema de saúde colápsa.");
+	jornal->adicionaTextoNoticia("Após descaso do Governo de Jair Bolsonaro, Brasil bate novos récordes de mortes e sistema de saúde colápsa.",0,0);
 	
 	
 	//Player
@@ -41,8 +41,6 @@ void Jogo::finalizar()
 
 void Jogo::executar()
 {
-	Jornal* j1;
-	
 	while(!gTeclado.soltou[TECLA_ESC] && !gEventos.sair)
 	{
 		uniIniciarFrame();
@@ -61,8 +59,10 @@ void Jogo::executar()
 
 void Jogo::carregarRecursos()
 {
+	if (!gRecursos.carregouFonte("TituloJornal"))
 	gRecursos.carregarFonte("TituloJornal", "../assets/pixelplay.ttf");
-	gRecursos.carregarFonte("TextoColuna", "../assets/new_browserlink.ttf");
+	if (!gRecursos.carregouFonte("TextoColuna"))
+		gRecursos.carregarFonte("TextoColuna", "../assets/new_browserlink.ttf");
 	gRecursos.carregarSpriteSheet("templateJornal", "../assets/JornalTemplate.png", 1, 1);
 	gRecursos.carregarSpriteSheet("player", "../assets/Player.png", 1, 2);
 }

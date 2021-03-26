@@ -20,16 +20,18 @@ void Jornal::adicionaTituloNoticia(string tit_noticia)
 	texto_tituloNoticia.setString(tit_noticia);
 }
 
-void Jornal::adicionaTextoNoticia(string texto_noticia)
+void Jornal::adicionaTextoNoticia(string texto_noticia, int nro_pg, int nro_noticia)
 {
-	texto_coluna.setString(texto_noticia);
+	paginas[0].obtemNoticias()[0].obtemColunas()[0].defineTextoColuna(texto_noticia);
+	paginas[0].obtemNoticias()[0].obtemColunas()[1].defineTextoColuna(texto_noticia);
+	paginas[0].obtemNoticias()[1].obtemColunas()[0].defineTextoColuna(texto_noticia);
+	paginas[0].obtemNoticias()[1].obtemColunas()[1].defineTextoColuna(texto_noticia);
 }
 
 void Jornal::desenhar()
 {
 	sprite_tempJornal.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 1.2);
 	texto_tituloJornal.desenhar(gJanela.getLargura() / 2, gJanela.getAltura() / 6);
-	texto_coluna.desenhar(gJanela.getLargura() / 3.8, gJanela.getAltura() / 1.8);
 	texto_tituloNoticia.desenhar(gJanela.getLargura() / 3.3, gJanela.getAltura() / 2.5);
 	for (int i = 0; i < numero_paginas; i++)
 		paginas[i].desenhar();
@@ -53,14 +55,6 @@ void Jornal::inicializar()
 	texto_tituloNoticia.setAlinhamento(TEXTO_CENTRALIZADO);
 	texto_tituloNoticia.setEscala(1.5, 1.5);
 
-	texto_coluna.setFonte("TextoColuna");
-	texto_coluna.setAlinhamento(TEXTO_ALINHADO_A_ESQUERDA);
-	texto_coluna.setLarguraMaxima(100);
-	texto_coluna.setEscala(0.5, 0.5);
-	texto_coluna.setCor(0, 0, 0);
-	texto_coluna.setEspacamentoLinhas(1.5);
-
-	Noticia* ntc = new Noticia();
 	paginas = new Pagina[numero_paginas];
 	for (int i = 0; i < numero_paginas; i++)
 		paginas[i].inicializar();

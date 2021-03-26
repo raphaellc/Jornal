@@ -8,7 +8,7 @@ public:
 	~Jornal();
 	void adicionaTituloJornal(string tit_jornal);
 	void adicionaTituloNoticia(string tit_noticia);
-	void adicionaTextoNoticia(string texto_noticia);
+	void adicionaTextoNoticia(string texto_noticia, int nro_pg, int nro_noticia);
 	void desenhar();
 private:
 	void inicializar();

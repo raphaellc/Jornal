@@ -6,10 +6,11 @@ public:
 	Noticia();
 	void desenhar();
 	void inicializar();
-	void defineTextoNoticia(string texto);
-	void defineColuna(Coluna* col);
+	void defineTituloNoticia(string texto);
+	Coluna* obtemColunas();
 private:
 	Coluna* colunas;
 	string texto_not;
+	Texto titulo_noticia;
 };
 
