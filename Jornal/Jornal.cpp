@@ -26,8 +26,6 @@ void Jornal::adicionaTextoNoticia(string texto_noticia, int nro_pg, int nro_noti
 	paginas[0].obtemNoticias()[0].obtemColunas()[1].defineTextoColuna(texto_noticia);
 	paginas[0].obtemNoticias()[1].obtemColunas()[0].defineTextoColuna(texto_noticia);
 	paginas[0].obtemNoticias()[1].obtemColunas()[1].defineTextoColuna(texto_noticia);
-	paginas[1].obtemNoticias()[1].obtemColunas()[1].defineTextoColuna(texto_noticia);
-	paginas[1].obtemNoticias()[1].obtemColunas()[1].defineTextoColuna(texto_noticia);
 }
 
 void Jornal::desenhar()
@@ -42,7 +40,7 @@ void Jornal::desenhar()
 
 void Jornal::inicializar()
 {
-	numero_paginas = 10;
+	numero_paginas = 1;
 	sprite_tempJornal.setSpriteSheet("templateJornal");
 	sprite_tempJornal.setEscala(0.5, 0.5);
 	

@@ -2,16 +2,21 @@
 
 Coluna::Coluna()
 {
-	coluna.setFonte("TextoColuna");
+}
+
+Coluna::~Coluna()
+{
+}
+
+void Coluna::inicializar()
+{
+	if (gRecursos.carregouFonte("TextoColuna"))
+		coluna.setFonte("TextoColuna");
 	coluna.setAlinhamento(TEXTO_ALINHADO_A_ESQUERDA);
 	coluna.setLarguraMaxima(100);
 	coluna.setEscala(0.5, 0.5);
 	coluna.setCor(0, 0, 0);
 	coluna.setEspacamentoLinhas(1.5);
-}
-
-Coluna::~Coluna()
-{
 }
 
 void Coluna::desenhar()
@@ -22,4 +27,14 @@ void Coluna::desenhar()
 void Coluna::defineTextoColuna(string txt_coluna)
 {
 	coluna.setString(txt_coluna);
+}
+
+void Coluna::defineX(int x)
+{
+	_x = x;
+}
+
+void Coluna::defineY(int y)
+{
+	_y = y;
 }

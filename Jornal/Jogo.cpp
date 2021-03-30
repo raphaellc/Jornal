@@ -18,6 +18,7 @@ void Jogo::inicializar()
 	
 	//Definindo a base do jornal.
 	jornal = new Jornal();
+	
 	jornal->adicionaTituloJornal("Movimento Diário");
 	jornal->adicionaTituloNoticia("Pandemia já faz XXXX vítimas");
 	jornal->adicionaTextoNoticia("Após descaso do Governo de Jair Bolsonaro, Brasil bate novos récordes de mortes e sistema de saúde colápsa.",0,0);

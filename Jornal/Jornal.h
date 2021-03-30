@@ -13,7 +13,7 @@ public:
 private:
 	void inicializar();
 	Sprite sprite_tempJornal;
-	Texto texto_tituloJornal, texto_coluna, texto_tituloNoticia;
+	Texto texto_tituloJornal, texto_tituloNoticia;
 	Pagina* paginas;
 	int numero_paginas;
 };

@@ -2,7 +2,6 @@
 
 Noticia::Noticia()
 {
-	colunas = new Coluna[2];
 }
 
 void Noticia::desenhar()
@@ -13,6 +12,11 @@ void Noticia::desenhar()
 
 void Noticia::inicializar()
 {
+	colunas = new Coluna[2];
+	for (size_t i = 0; i < 2; i++)
+	{
+		colunas[i].inicializar();
+	}
 	
 }
 
