@@ -21,7 +21,7 @@ void Coluna::inicializar()
 
 void Coluna::desenhar()
 {
-	coluna.desenhar(gJanela.getLargura() / 3.8, gJanela.getAltura() / 1.8);
+	coluna.desenhar(_x,_y);
 }
 
 void Coluna::defineTextoColuna(string txt_coluna)

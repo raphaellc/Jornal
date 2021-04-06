@@ -11,10 +11,14 @@ public:
 	~Pagina();
 	void inicializar();
 	void desenhar();
+	void adicionaTextoNoticia(string texto_noticia);
+	void adicionaNoticia(string tit_noticia, string texto_noticia);
+	void defineNumeroNoticiasPorPagina(int nnpp);
 	Noticia* obtemNoticias();
 private:
 	int x, y;
 	Texto numero_pagina;
-	Noticia* noticias;
+	Noticia* _noticias;
+	int _noticiaAdefinir = 0, _numeroNoticiasPPg;
 };
 

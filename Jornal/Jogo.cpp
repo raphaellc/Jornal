@@ -18,10 +18,11 @@ void Jogo::inicializar()
 	
 	//Definindo a base do jornal.
 	jornal = new Jornal();
-	
+	jornal->configurarJornal(1, 2, 2);
+	jornal->inicializar();
 	jornal->adicionaTituloJornal("Movimento Diário");
-	jornal->adicionaTituloNoticia("Pandemia já faz XXXX vítimas");
-	jornal->adicionaTextoNoticia("Após descaso do Governo de Jair Bolsonaro, Brasil bate novos récordes de mortes e sistema de saúde colápsa.",0,0);
+	jornal->adicionaNoticia("Impeachtment Já","Após descaso do Governo de Jair Bolsonaro, Brasil bate novos récordes de mortes e sistema de saúde colápsa.");
+	jornal->adicionaNoticia("Genocídio brasileiro", "após Bolsonaro fazer uma política negacionista, a vida de etnias indígenas estão ameaçadas.");
 	
 	
 	//Player
